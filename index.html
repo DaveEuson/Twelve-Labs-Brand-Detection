@@ -41,7 +41,6 @@
     .btn-red { background: #f7768e22; border-color: #f7768e55; color: var(--color-red); }
     .btn-clear { background: #f7768e22; border-color: #f7768e55; color: var(--color-red); padding: 6px 12px; font-size: 12px; }
     
-    /* Toggle Switch Styles */
     .toggle-container { display: flex; background: rgba(0,0,0,0.4); border: 2px solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden; }
     .btn-toggle { background: transparent; border: none; color: var(--color-text-muted); padding: 10px 20px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-size: 14px; }
     .btn-toggle:hover { color: var(--color-text); }
@@ -49,11 +48,25 @@
 
     .glass-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 24px; box-shadow: 0 8px 32px rgba(122, 162, 247, 0.05); }
 
+    /* 🎯 MATCHING THE REAL DASHBOARD EXACTLY */
     .active-jobs-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px; }
-    .active-job-card { background: rgba(122, 162, 247, 0.1); border: 1px solid var(--color-accent); border-radius: var(--radius-sm); padding: 16px 24px; display: flex; align-items: center; gap: 16px; animation: pulse 2s infinite; }
-    .spinner { width: 24px; height: 24px; border: 3px solid rgba(122, 162, 247, 0.3); border-radius: 50%; border-top-color: var(--color-accent); animation: spin 1s ease-in-out infinite; }
+    .active-job-card { 
+        background: #1f2335; 
+        border: 1px solid #7aa2f7; 
+        border-radius: var(--radius-sm); 
+        padding: 16px 24px; 
+        display: flex; align-items: center; gap: 16px; 
+        animation: pulse 2s infinite; 
+    }
+    .spinner { 
+        width: 24px; height: 24px; 
+        border: 3px solid rgba(122, 162, 247, 0.2); 
+        border-radius: 50%; 
+        border-top-color: #7aa2f7; 
+        animation: spin 1s linear infinite; 
+    }
     @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(122, 162, 247, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(122, 162, 247, 0); } 100% { box-shadow: 0 0 0 0 rgba(122, 162, 247, 0); } }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(122, 162, 247, 0.2); } 70% { box-shadow: 0 0 0 10px rgba(122, 162, 247, 0); } 100% { box-shadow: 0 0 0 0 rgba(122, 162, 247, 0); } }
 
     .stats-grid { display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
     .stat-card { flex: 1 1 220px; position: relative; overflow: hidden; }
@@ -143,19 +156,15 @@
     // MOCK DATA BASELINE
     let rawData = [
       { clip_name: "NASCAR Richmond Extended Highlights", brand: "Toyota Hood & Side Panels", coreBrand: "Toyota", prominence: "DOMINANT", rawStartTc: "00:00:30", cleanStart: 30, cleanDur: 72, cleanVal: 72000, asset_id: "fake_id_1" },
-      { clip_name: "NASCAR Richmond Extended Highlights", brand: "Sunoco Pit Wall Branding", coreBrand: "Sunoco", prominence: "PROMINENT", rawStartTc: "00:01:15", cleanStart: 75, cleanDur: 45, cleanVal: 45000, asset_id: "fake_id_1" },
-      { clip_name: "NASCAR Richmond Extended Highlights", brand: "Goodyear Tire Branding", coreBrand: "Goodyear", prominence: "MODERATE", rawStartTc: "00:00:45", cleanStart: 45, cleanDur: 70, cleanVal: 35000, asset_id: "fake_id_1" },
       { clip_name: "NBA: Corbett's 200th Three-Pointer", brand: "GEICO Courtside LED", coreBrand: "GEICO", prominence: "DOMINANT", rawStartTc: "00:00:10", cleanStart: 10, cleanDur: 66, cleanVal: 66000, asset_id: "fake_id_2" },
-      { clip_name: "NBA: Corbett's 200th Three-Pointer", brand: "Nike Jersey Swoosh Patch", coreBrand: "Nike", prominence: "MODERATE", rawStartTc: "00:00:15", cleanStart: 15, cleanDur: 66, cleanVal: 33000, asset_id: "fake_id_2" },
       { clip_name: "Premier League Goal Comp", brand: "Hublot Ref Board", coreBrand: "Hublot", prominence: "PROMINENT", rawStartTc: "00:02:10", cleanStart: 130, cleanDur: 45, cleanVal: 45000, asset_id: "fake_id_3" },
       { clip_name: "Wimbledon Final Set", brand: "Rolex Backwall", coreBrand: "Rolex", prominence: "PROMINENT", rawStartTc: "00:05:00", cleanStart: 300, cleanDur: 135, cleanVal: 135000, asset_id: "fake_id_4" }
     ];
     
-    // Save original state for the Nuke button reset
     const originalData = JSON.parse(JSON.stringify(rawData));
 
     let currentGrouping = "event"; 
-    let selectedBrand = null; // Used for clicking chart bars
+    let selectedBrand = null; 
     let eventChartInstance = null;
     let barChartInstance = null;
     let pieChartInstance = null;
@@ -173,7 +182,7 @@
         setTimeout(() => t.classList.remove("show"), 4000); 
     }
 
-    // 🎯 THE SIMULATION ENGINE
+    // 🎯 THE SIMULATION ENGINE (EXACT MATCH TO SCREENSHOT)
     function simulateJob() {
         const btn = document.getElementById("btnSimulate");
         btn.disabled = true;
@@ -181,15 +190,13 @@
         btn.innerText = "⏳ Processing...";
         
         const container = document.getElementById("activeJobsContainer");
-        const startTime = new Date().toLocaleTimeString("en-US", { hour: 'numeric', minute: '2-digit', second: '2-digit' });
         
         container.innerHTML = `
-            <h3 style="margin: 0 0 12px 0; font-size: 16px; color: var(--color-text-bright); border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">📡 Job Status</h3>
             <div class="active-job-card">
                 <div class="spinner"></div>
                 <div>
-                    <div style="color:var(--color-accent); font-weight:700; font-size:12px; letter-spacing:1px;">⚙️ PROCESSING JOB • Started: ${startTime}</div>
-                    <div style="color:var(--color-text-bright); font-size:16px; font-weight:600; margin-top:4px;">F1 Monaco Pit Stop Analysis</div>
+                    <div style="color:var(--color-accent); font-weight:700; font-size:12px; letter-spacing:1px; text-transform: uppercase;">⚙️ PROCESSING JOB</div>
+                    <div style="color:var(--color-text-bright); font-size:16px; font-weight:600; margin-top:4px;">NASCAR Pit Stop Analysis</div>
                     <div style="color:var(--color-text-muted); font-size:13px; margin-top:2px;">Status: Twelve Labs Analyzing...</div>
                 </div>
             </div>
@@ -197,23 +204,23 @@
         
         showToast("🔔 Iconik Webhook received. AI Engine started.");
 
-        // Wait 6 seconds, then inject new data
+        // Wait 5 seconds, remove card, inject new data
         setTimeout(() => {
             container.innerHTML = "";
             showToast("✅ AI Analysis Complete! Dashboard updating...");
             
-            // Injecting the requested high-density data
+            // Injecting the requested high-density NASCAR data!
             rawData.push(
-                { clip_name: "F1 Monaco Pit Stop Analysis", brand: "Oracle Sidepod Logo", coreBrand: "Oracle", prominence: "PROMINENT", rawStartTc: "00:00:12", cleanStart: 12, cleanDur: 22, cleanVal: 22000, asset_id: "fake_id_5" },
-                { clip_name: "F1 Monaco Pit Stop Analysis", brand: "Red Bull Rear Wing", coreBrand: "Red Bull", prominence: "DOMINANT", rawStartTc: "00:00:10", cleanStart: 10, cleanDur: 25, cleanVal: 25000, asset_id: "fake_id_5" },
-                { clip_name: "F1 Monaco Pit Stop Analysis", brand: "Pirelli Tires (Soft Compound)", coreBrand: "Pirelli", prominence: "MODERATE", rawStartTc: "00:00:14", cleanStart: 14, cleanDur: 18, cleanVal: 9000, asset_id: "fake_id_5" }
+                { clip_name: "NASCAR Pit Stop Analysis", brand: "Castrol EDGE Wall Signage", coreBrand: "Castrol", prominence: "DOMINANT", rawStartTc: "00:00:15", cleanStart: 15, cleanDur: 30, cleanVal: 30000, asset_id: "fake_id_6" },
+                { clip_name: "NASCAR Pit Stop Analysis", brand: "Ford Performance Banner", coreBrand: "Ford", prominence: "PROMINENT", rawStartTc: "00:00:18", cleanStart: 18, cleanDur: 25, cleanVal: 25000, asset_id: "fake_id_6" },
+                { clip_name: "NASCAR Pit Stop Analysis", brand: "Sunoco Fuel Can", coreBrand: "Sunoco", prominence: "MODERATE", rawStartTc: "00:00:22", cleanStart: 22, cleanDur: 10, cleanVal: 5000, asset_id: "fake_id_6" }
             );
             
             renderDashboard();
             btn.disabled = false;
             btn.style.opacity = "1";
             btn.innerText = "▶️ Simulate Webhook";
-        }, 6000);
+        }, 5000);
     }
 
     function nukeData() {
@@ -221,6 +228,7 @@
             rawData = JSON.parse(JSON.stringify(originalData));
             selectedBrand = null;
             document.getElementById("btnClearFilter").style.display = "none";
+            document.getElementById("activeJobsContainer").innerHTML = "";
             renderDashboard();
             showToast("☢️ Dashboard Reset to Default.");
         }
@@ -246,7 +254,6 @@
       const promMap = { DOMINANT: 0, PROMINENT: 0, MODERATE: 0, SUBTLE: 0 }; 
       const uniqueClips = new Set();
       
-      // Filter rows if a specific brand is selected via the chart
       const activeRows = selectedBrand ? rawData.filter(r => r.coreBrand === selectedBrand) : rawData;
 
       activeRows.forEach(r => {
@@ -275,7 +282,8 @@
       if (eventChartInstance) eventChartInstance.destroy();
       eventChartInstance = new Chart(document.getElementById('eventChart').getContext('2d'), {
         type: 'bar', data: { labels: data.map(d => d.name), datasets: [{ data: data.map(d => d.value), backgroundColor: COLORS.accentAlt, borderRadius: 4 }] },
-        options: { ...chartOpts, indexAxis: 'y', plugins: { datalabels: { anchor: 'end', align: 'right', color: COLORS.green, font: { weight: 'bold' }, formatter: v => formatMoney(v) }, legend: { display: false } }, layout: { padding: { right: 60 } }, scales: { x: { display: false }, y: { grid: { display: false }, border: { display: false }, ticks: { color: COLORS.textBright, font: { weight: 'bold' } } } } }
+        // 🎯 Fixed padding so long clip names aren't cut off
+        options: { ...chartOpts, indexAxis: 'y', plugins: { datalabels: { anchor: 'end', align: 'right', color: COLORS.green, font: { weight: 'bold' }, formatter: v => formatMoney(v) }, legend: { display: false } }, layout: { padding: { left: 10, right: 60 } }, scales: { x: { display: false }, y: { grid: { display: false }, border: { display: false }, ticks: { color: COLORS.textBright, font: { weight: 'bold' } } } } }
       });
     }
 
@@ -283,7 +291,6 @@
       if (barChartInstance) barChartInstance.destroy();
       barChartInstance = new Chart(document.getElementById('barChart').getContext('2d'), {
         type: 'bar', data: { labels: data.map(d => d.name), datasets: [{ data: data.map(d => d.value), backgroundColor: data.map(d => (selectedBrand && d.name !== selectedBrand) ? COLORS.border : COLORS.accent), borderRadius: 4 }] },
-        // 🎯 INTERACTIVE CHART CLICK HANDLER
         options: { ...chartOpts, indexAxis: 'y', plugins: { datalabels: { anchor: 'end', align: 'right', color: COLORS.green, font: { weight: 'bold' }, formatter: v => formatMoney(v) }, legend: { display: false } }, layout: { padding: { right: 60 } }, scales: { x: { display: false }, y: { grid: { display: false }, border: { display: false }, ticks: { color: COLORS.textBright, font: { weight: 'bold' } } } }, 
         onClick: (e, els) => { 
             if (els.length) { 
@@ -320,7 +327,6 @@
         let rowsHtml = "";
         
         for (const r of group.details) {
-          // If grouped by Event, show Brand. If grouped by Brand, show Event.
           const firstColName = currentGrouping === 'event' ? r.coreBrand : r.clip_name;
           
           rowsHtml += `<tr>
@@ -342,7 +348,6 @@
       container.innerHTML = htmlOutput;
     }
 
-    // Init the dashboard on load
     window.onload = renderDashboard;
 
   </script>
