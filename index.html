@@ -424,7 +424,7 @@
       if(ov?.byProminence){ const rate=Number(ov.byProminence[prom]||0); if(rate>0)return Math.round(rate*dur); }
       const hasG=Object.values(S.rates).some(v=>Number(v)>0);
       if(hasG&&Number(S.rates[prom])>0)return Math.round(Number(S.rates[prom])*dur);
-      return r.cleanVal;
+      return r.serverVal;
     }
 
     /* ════ LOGOS ════ */
@@ -513,7 +513,7 @@
         const id=uid(r), edit=rowEdits[id]||{};
         const prom=edit.prom||r.prominence;
         const cb=edit.coreBrand||r.coreBrand;
-        const row={...r,uid:id,prom,coreBrand:cb,cleanVal:0,isIncluded:!excludedUids.has(id),isDeleted:deletedUids.has(id),hasEdit:!!Object.keys(edit).length};
+        const row={...r,uid:id,prom,coreBrand:cb,serverVal:r.cleanVal,cleanVal:0,isIncluded:!excludedUids.has(id),isDeleted:deletedUids.has(id),hasEdit:!!Object.keys(edit).length};
         row.cleanVal=calcVal(row);
         return row;
       }).filter(r=>!r.isDeleted);
