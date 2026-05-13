@@ -128,7 +128,7 @@ Both sources feed the same universal dashboard. Mimir and Iconik assets appear s
 
 ## 🔗 Live Demo
 
-**[View the Interactive Brand Exposure Dashboard →]([https://daveeuson.github.io/tl2026Dash/](https://daveeuson.github.io/Twelve-Labs-Brand-Detection/))**
+**[View the Interactive Brand Exposure Dashboard →]([https://daveeuson.github.io/tl2026Dash/](https://daveeuson.github.io/Twelve-Labs-Brand-Detection/)**
 
 ---
 
