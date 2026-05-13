@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DEMO | Qibb Brand Exposure Tracker</title>
+  <title>DEMO | Twelve Labs Brand Exposer Traffic</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -269,6 +269,71 @@
         </div>
       </div>
 
+      <div class="s-sec">
+        <h3>📋 Changelog</h3>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
+          <div style="background:rgba(0,0,0,.2);border-radius:var(--rs);padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span style="background:rgba(158,206,106,.2);color:var(--grn);border:1px solid rgba(158,206,106,.4);border-radius:5px;padding:2px 8px;font-size:10px;font-weight:800;">v2.4</span>
+              <span style="font-size:10px;color:var(--mut);">2026-05-12</span>
+            </div>
+            <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--txt);line-height:1.9;">
+              <li>Group sort: newest first default + 4-option dropdown</li>
+              <li>Charts layout: Value by Core Brand moved to full-width row</li>
+              <li>Settings button moved to far right of toolbar</li>
+              <li>Title updated to Twelve Labs Brand Exposer Traffic</li>
+              <li>Mimir deep links now include timecode (ms)</li>
+            </ul>
+          </div>
+          <div style="background:rgba(0,0,0,.2);border-radius:var(--rs);padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span style="background:rgba(122,162,247,.2);color:var(--acc);border:1px solid rgba(122,162,247,.4);border-radius:5px;padding:2px 8px;font-size:10px;font-weight:800;">v2.3</span>
+              <span style="font-size:10px;color:var(--mut);">2026-05-10</span>
+            </div>
+            <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--txt);line-height:1.9;">
+              <li>Twelve Labs prompt optimised for exhaustive brand detection</li>
+              <li>SUBTLE prominence nudge: prefer lower level over omitting</li>
+              <li>Universal + Sports + Studio scanning tiers added to prompt</li>
+            </ul>
+          </div>
+          <div style="background:rgba(0,0,0,.2);border-radius:var(--rs);padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span style="background:rgba(187,154,247,.2);color:var(--acc2);border:1px solid rgba(187,154,247,.4);border-radius:5px;padding:2px 8px;font-size:10px;font-weight:800;">v2.2</span>
+              <span style="font-size:10px;color:var(--mut);">2026-05-08</span>
+            </div>
+            <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--txt);line-height:1.9;">
+              <li>Mimir source badge fix — assets submitted via Mimir now tagged correctly</li>
+              <li>Per-event viewership multiplier with inline editing</li>
+              <li>Active job spinner with dismiss and real-time status</li>
+            </ul>
+          </div>
+          <div style="background:rgba(0,0,0,.2);border-radius:var(--rs);padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span style="background:rgba(255,158,100,.15);color:var(--org);border:1px solid rgba(255,158,100,.35);border-radius:5px;padding:2px 8px;font-size:10px;font-weight:800;">v2.1</span>
+              <span style="font-size:10px;color:var(--mut);">2026-05-05</span>
+            </div>
+            <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--txt);line-height:1.9;">
+              <li>Brand rate overrides per prominence level</li>
+              <li>Global viewership baseline with per-row multiplier</li>
+              <li>CSV and PDF export</li>
+              <li>Inline prominence and value editing with undo</li>
+            </ul>
+          </div>
+          <div style="background:rgba(0,0,0,.2);border-radius:var(--rs);padding:10px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span style="background:rgba(86,95,137,.3);color:var(--mut);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:10px;font-weight:800;">v2.0</span>
+              <span style="font-size:10px;color:var(--mut);">2026-04-28</span>
+            </div>
+            <ul style="margin:0;padding-left:16px;font-size:11px;color:var(--txt);line-height:1.9;">
+              <li>Initial dashboard — Mimir + Iconik dual-source support</li>
+              <li>Event type detection and filtering</li>
+              <li>Multi-theme support (6 themes)</li>
+              <li>Drilldown by brand across events</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="s-ft">
         <button class="brst" onclick="resetSettings()">↺ Reset</button>
         <button class="bsv"  onclick="saveSettings()">💾 Save & Apply</button>
@@ -280,7 +345,7 @@
   <div class="dc">
     <div class="top-bar">
       <div class="title-group">
-        <h1><span style="color:var(--acc)">🌙</span> BRAND EXPOSURE TRACKER</h1>
+        <h1><span style="color:var(--acc)">🌙</span> Twelve Labs Brand Exposer Traffic</h1>
         <div class="subtitle">Powered by Qibb Workflows &nbsp;·&nbsp; <span style="color:#00c896;">● Mimir</span> &nbsp;+&nbsp; <span style="color:#7aa2f7;">● Iconik</span></div>
       </div>
       <div class="cg">
@@ -293,10 +358,10 @@
         </select>
         <button id="btnSim"  class="btn b-grn" onclick="simulateJob()">▶️ Simulate</button>
         <button id="btnAuto" class="btn b-auto" onclick="toggleAuto()">⟳ Auto</button>
-        <button class="btn b-set" onclick="openSettings()">⚙️ Settings</button>
         <button class="btn b-acc" id="btnCsv">📊 CSV</button>
         <button class="btn b-acc" id="btnPdf">📄 PDF</button>
         <button class="btn b-red" onclick="nukeData()">☢️ Nuke</button>
+        <button class="btn b-set" onclick="openSettings()">⚙️ Settings</button>
       </div>
     </div>
 
@@ -311,34 +376,32 @@
         <div class="gc sc" id="sViewCard" style="display:none;"><div class="sl">Avg Viewership</div><div id="sViewers" class="sv" style="color:var(--acc)">—</div></div>
       </div>
 
-      <div class="charts-area">
+      <div class="charts-area" style="grid-template-columns:1fr 1fr;margin-bottom:18px;">
         <div class="gc chart-box">
           <div class="chart-title">Value by Event</div>
           <div id="evWrap" class="cc"><canvas id="evChart"></canvas></div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div class="gc chart-box">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-              <div class="chart-title" style="margin:0;">Value by Core Brand</div>
-              <button id="btnCF" class="btn b-red b-sm" style="display:none;" onclick="clearBF()">✕ Reset</button>
-            </div>
-            <div class="cc"><canvas id="barChart"></canvas></div>
-          </div>
-          <div id="ddCard" class="gc">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-              <div>
-                <div id="ddTitle" style="font-size:14px;font-weight:800;color:var(--brt);display:flex;align-items:center;gap:8px;"></div>
-                <div style="font-size:10px;color:var(--mut);margin-top:3px;text-transform:uppercase;letter-spacing:1px;">Appearances by event</div>
-              </div>
-              <button style="background:none;border:none;color:var(--mut);font-size:18px;cursor:pointer;" onclick="closeDrilldown()">✕</button>
-            </div>
-            <div id="ddContent"></div>
-          </div>
         </div>
         <div class="gc chart-box">
           <div class="chart-title">Exposure Prominence</div>
           <div class="cc"><canvas id="pieChart"></canvas></div>
         </div>
+      </div>
+      <div class="gc chart-box" style="margin-bottom:18px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div class="chart-title" style="margin:0;">Value by Core Brand</div>
+          <button id="btnCF" class="btn b-red b-sm" style="display:none;" onclick="clearBF()">✕ Reset</button>
+        </div>
+        <div id="barWrap" class="cc"><canvas id="barChart"></canvas></div>
+      </div>
+      <div id="ddCard" class="gc" style="margin-bottom:22px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <div>
+            <div id="ddTitle" style="font-size:14px;font-weight:800;color:var(--brt);display:flex;align-items:center;gap:8px;"></div>
+            <div style="font-size:10px;color:var(--mut);margin-top:3px;text-transform:uppercase;letter-spacing:1px;">Appearances by event</div>
+          </div>
+          <button style="background:none;border:none;color:var(--mut);font-size:18px;cursor:pointer;" onclick="closeDrilldown()">✕</button>
+        </div>
+        <div id="ddContent"></div>
       </div>
 
       <!-- Log header -->
@@ -351,6 +414,12 @@
             <span class="search-icon">🔍</span>
             <input id="searchBox" type="text" placeholder="Search brands, events…" oninput="renderDashboard()">
           </div>
+          <select id="grpSort" class="sf" onchange="setGroupSort(this.value)" title="Sort groups">
+            <option value="date-desc">📅 Newest First</option>
+            <option value="date-asc">📅 Oldest First</option>
+            <option value="val-desc">💰 Value: High → Low</option>
+            <option value="val-asc">💰 Value: Low → High</option>
+          </select>
           <div class="tog-wrap">
             <button id="togEv" class="tog on" onclick="setGroup('event')">By Event</button>
             <button id="togBr" class="tog"    onclick="setGroup('brand')">By Brand</button>
@@ -372,39 +441,39 @@
 
     /* ════ SEED DATA ════ */
     const SEED = [
-      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Toyota Hood & Side Panels",   coreBrand:"Toyota",        prominence:"DOMINANT",  rawStartTc:"00:00:30", cleanStart:30,  cleanDur:72,  cleanVal:72000,  asset_id:"fake_1",  source:"iconik" },
-      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Sunoco Pit Wall Branding",    coreBrand:"Sunoco",        prominence:"PROMINENT", rawStartTc:"00:01:15", cleanStart:75,  cleanDur:45,  cleanVal:45000,  asset_id:"fake_1",  source:"iconik" },
-      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Goodyear Tire Decal",         coreBrand:"Goodyear",      prominence:"MODERATE",  rawStartTc:"00:02:00", cleanStart:120, cleanDur:30,  cleanVal:9000,   asset_id:"fake_1",  source:"iconik" },
-      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"GEICO Courtside LED",          coreBrand:"GEICO",         prominence:"DOMINANT",  rawStartTc:"00:00:10", cleanStart:10,  cleanDur:66,  cleanVal:66000,  asset_id:"fake_2",  source:"mimir"  },
-      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"Nike Jersey Swoosh Patch",     coreBrand:"Nike",          prominence:"MODERATE",  rawStartTc:"00:00:15", cleanStart:15,  cleanDur:66,  cleanVal:33000,  asset_id:"fake_2",  source:"mimir"  },
-      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"Gatorade Courtside Cup",       coreBrand:"Gatorade",      prominence:"SUBTLE",    rawStartTc:"00:01:30", cleanStart:90,  cleanDur:12,  cleanVal:2400,   asset_id:"fake_2",  source:"mimir"  },
-      { clip_name:"Premier League Goal Compilation",        brand:"Hublot Ref Board",            coreBrand:"Hublot",        prominence:"PROMINENT", rawStartTc:"00:02:10", cleanStart:130, cleanDur:45,  cleanVal:45000,  asset_id:"fake_3",  source:"mimir"  },
-      { clip_name:"Premier League Goal Compilation",        brand:"Adidas Field Boards",         coreBrand:"Adidas",        prominence:"DOMINANT",  rawStartTc:"00:01:00", cleanStart:60,  cleanDur:38,  cleanVal:38000,  asset_id:"fake_3",  source:"mimir"  },
-      { clip_name:"Premier League Goal Compilation",        brand:"Nike Match Ball",             coreBrand:"Nike",          prominence:"MODERATE",  rawStartTc:"00:03:22", cleanStart:202, cleanDur:20,  cleanVal:10000,  asset_id:"fake_3",  source:"mimir"  },
-      { clip_name:"Wimbledon Final Set",                   brand:"Rolex Backwall",              coreBrand:"Rolex",         prominence:"PROMINENT", rawStartTc:"00:05:00", cleanStart:300, cleanDur:135, cleanVal:135000, asset_id:"fake_4",  source:"iconik" },
-      { clip_name:"Wimbledon Final Set",                   brand:"IBM Scoring Board",           coreBrand:"IBM",           prominence:"SUBTLE",    rawStartTc:"00:10:00", cleanStart:600, cleanDur:8,   cleanVal:1600,   asset_id:"fake_4",  source:"iconik" },
-      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Oracle Sidepod Logo",         coreBrand:"Oracle",        prominence:"PROMINENT", rawStartTc:"00:00:12", cleanStart:12,  cleanDur:52,  cleanVal:52000,  asset_id:"fake_5",  source:"iconik" },
-      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Red Bull Rear Wing",          coreBrand:"Red Bull",      prominence:"DOMINANT",  rawStartTc:"00:00:10", cleanStart:10,  cleanDur:25,  cleanVal:25000,  asset_id:"fake_5",  source:"iconik" },
-      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Pirelli Tire Branding",       coreBrand:"Pirelli",       prominence:"MODERATE",  rawStartTc:"00:01:30", cleanStart:90,  cleanDur:18,  cleanVal:9000,   asset_id:"fake_5",  source:"iconik" },
-      { clip_name:"NFL Thanksgiving Halftime",             brand:"Gatorade Cooler",             coreBrand:"Gatorade",      prominence:"MODERATE",  rawStartTc:"00:04:10", cleanStart:250, cleanDur:12,  cleanVal:6000,   asset_id:"fake_6",  source:"iconik" },
-      { clip_name:"NFL Thanksgiving Halftime",             brand:"Verizon Sideline Net",        coreBrand:"Verizon",       prominence:"PROMINENT", rawStartTc:"00:04:15", cleanStart:255, cleanDur:20,  cleanVal:20000,  asset_id:"fake_6",  source:"iconik" },
-      { clip_name:"NFL Thanksgiving Halftime",             brand:"Nike Uniform Swoosh",         coreBrand:"Nike",          prominence:"SUBTLE",    rawStartTc:"00:02:00", cleanStart:120, cleanDur:60,  cleanVal:12000,  asset_id:"fake_6",  source:"iconik" },
-      { clip_name:"UFC 300 Main Event",                    brand:"Monster Energy Octagon Center",coreBrand:"Monster Energy",prominence:"DOMINANT",  rawStartTc:"00:00:05", cleanStart:5,   cleanDur:300, cleanVal:300000, asset_id:"fake_7",  source:"mimir"  },
-      { clip_name:"UFC 300 Main Event",                    brand:"Venum Fight Shorts",          coreBrand:"Venum",         prominence:"MODERATE",  rawStartTc:"00:00:20", cleanStart:20,  cleanDur:250, cleanVal:125000, asset_id:"fake_7",  source:"mimir"  },
-      { clip_name:"UFC 300 Main Event",                    brand:"Modelo Octagon Banner",       coreBrand:"Modelo",        prominence:"PROMINENT", rawStartTc:"00:05:00", cleanStart:300, cleanDur:80,  cleanVal:80000,  asset_id:"fake_7",  source:"mimir"  },
-      { clip_name:"Champions League Group Stage",          brand:"Heineken LED Board",          coreBrand:"Heineken",      prominence:"DOMINANT",  rawStartTc:"00:10:00", cleanStart:600, cleanDur:45,  cleanVal:45000,  asset_id:"fake_8",  source:"mimir"  },
-      { clip_name:"Champions League Group Stage",          brand:"Mastercard Tunnel Banner",    coreBrand:"Mastercard",    prominence:"PROMINENT", rawStartTc:"00:00:05", cleanStart:5,   cleanDur:15,  cleanVal:15000,  asset_id:"fake_8",  source:"mimir"  },
-      { clip_name:"PGA Masters Final Round",               brand:"Titleist Golf Bag",           coreBrand:"Titleist",      prominence:"MODERATE",  rawStartTc:"00:12:30", cleanStart:750, cleanDur:25,  cleanVal:12500,  asset_id:"fake_9",  source:"iconik" },
-      { clip_name:"PGA Masters Final Round",               brand:"Rolex Leaderboard",           coreBrand:"Rolex",         prominence:"PROMINENT", rawStartTc:"00:15:00", cleanStart:900, cleanDur:10,  cleanVal:10000,  asset_id:"fake_9",  source:"iconik" },
-      { clip_name:"X-Games Skate Final",                   brand:"Red Bull Helmet",             coreBrand:"Red Bull",      prominence:"DOMINANT",  rawStartTc:"00:02:15", cleanStart:135, cleanDur:45,  cleanVal:45000,  asset_id:"fake_10", source:"iconik" },
-      { clip_name:"X-Games Skate Final",                   brand:"Toyota Ramp Banner",          coreBrand:"Toyota",        prominence:"PROMINENT", rawStartTc:"00:02:20", cleanStart:140, cleanDur:30,  cleanVal:30000,  asset_id:"fake_10", source:"iconik" },
+      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Toyota Hood & Side Panels",    coreBrand:"Toyota",        prominence:"DOMINANT",  rawStartTc:"00:00:30", cleanStart:30,  cleanDur:72,  cleanVal:72000,  asset_id:"fake_1",  source:"iconik", timestamp:"5/1/2026, 10:14:08 AM" },
+      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Sunoco Pit Wall Branding",     coreBrand:"Sunoco",        prominence:"PROMINENT", rawStartTc:"00:01:15", cleanStart:75,  cleanDur:45,  cleanVal:45000,  asset_id:"fake_1",  source:"iconik", timestamp:"5/1/2026, 10:14:08 AM" },
+      { clip_name:"NASCAR Richmond Extended Highlights",   brand:"Goodyear Tire Decal",          coreBrand:"Goodyear",      prominence:"MODERATE",  rawStartTc:"00:02:00", cleanStart:120, cleanDur:30,  cleanVal:9000,   asset_id:"fake_1",  source:"iconik", timestamp:"5/1/2026, 10:14:08 AM" },
+      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"GEICO Courtside LED",           coreBrand:"GEICO",         prominence:"DOMINANT",  rawStartTc:"00:00:10", cleanStart:10,  cleanDur:66,  cleanVal:66000,  asset_id:"fake_2",  source:"mimir",  timestamp:"5/3/2026, 2:22:45 PM"  },
+      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"Nike Jersey Swoosh Patch",      coreBrand:"Nike",          prominence:"MODERATE",  rawStartTc:"00:00:15", cleanStart:15,  cleanDur:66,  cleanVal:33000,  asset_id:"fake_2",  source:"mimir",  timestamp:"5/3/2026, 2:22:45 PM"  },
+      { clip_name:"NBA: Corbett's 200th Three-Pointer",    brand:"Gatorade Courtside Cup",        coreBrand:"Gatorade",      prominence:"SUBTLE",    rawStartTc:"00:01:30", cleanStart:90,  cleanDur:12,  cleanVal:2400,   asset_id:"fake_2",  source:"mimir",  timestamp:"5/3/2026, 2:22:45 PM"  },
+      { clip_name:"Premier League Goal Compilation",        brand:"Hublot Ref Board",             coreBrand:"Hublot",        prominence:"PROMINENT", rawStartTc:"00:02:10", cleanStart:130, cleanDur:45,  cleanVal:45000,  asset_id:"fake_3",  source:"mimir",  timestamp:"5/5/2026, 11:05:30 AM" },
+      { clip_name:"Premier League Goal Compilation",        brand:"Adidas Field Boards",          coreBrand:"Adidas",        prominence:"DOMINANT",  rawStartTc:"00:01:00", cleanStart:60,  cleanDur:38,  cleanVal:38000,  asset_id:"fake_3",  source:"mimir",  timestamp:"5/5/2026, 11:05:30 AM" },
+      { clip_name:"Premier League Goal Compilation",        brand:"Nike Match Ball",              coreBrand:"Nike",          prominence:"MODERATE",  rawStartTc:"00:03:22", cleanStart:202, cleanDur:20,  cleanVal:10000,  asset_id:"fake_3",  source:"mimir",  timestamp:"5/5/2026, 11:05:30 AM" },
+      { clip_name:"X-Games Skate Final",                   brand:"Red Bull Helmet",              coreBrand:"Red Bull",      prominence:"DOMINANT",  rawStartTc:"00:02:15", cleanStart:135, cleanDur:45,  cleanVal:45000,  asset_id:"fake_10", source:"iconik", timestamp:"5/6/2026, 4:37:19 PM"  },
+      { clip_name:"X-Games Skate Final",                   brand:"Toyota Ramp Banner",           coreBrand:"Toyota",        prominence:"PROMINENT", rawStartTc:"00:02:20", cleanStart:140, cleanDur:30,  cleanVal:30000,  asset_id:"fake_10", source:"iconik", timestamp:"5/6/2026, 4:37:19 PM"  },
+      { clip_name:"Wimbledon Final Set",                   brand:"Rolex Backwall",               coreBrand:"Rolex",         prominence:"PROMINENT", rawStartTc:"00:05:00", cleanStart:300, cleanDur:135, cleanVal:135000, asset_id:"fake_4",  source:"iconik", timestamp:"5/7/2026, 9:18:02 AM"  },
+      { clip_name:"Wimbledon Final Set",                   brand:"IBM Scoring Board",            coreBrand:"IBM",           prominence:"SUBTLE",    rawStartTc:"00:10:00", cleanStart:600, cleanDur:8,   cleanVal:1600,   asset_id:"fake_4",  source:"iconik", timestamp:"5/7/2026, 9:18:02 AM"  },
+      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Oracle Sidepod Logo",          coreBrand:"Oracle",        prominence:"PROMINENT", rawStartTc:"00:00:12", cleanStart:12,  cleanDur:52,  cleanVal:52000,  asset_id:"fake_5",  source:"iconik", timestamp:"5/8/2026, 3:44:55 PM"  },
+      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Red Bull Rear Wing",           coreBrand:"Red Bull",      prominence:"DOMINANT",  rawStartTc:"00:00:10", cleanStart:10,  cleanDur:25,  cleanVal:25000,  asset_id:"fake_5",  source:"iconik", timestamp:"5/8/2026, 3:44:55 PM"  },
+      { clip_name:"F1 Monaco Grand Prix Recap",            brand:"Pirelli Tire Branding",        coreBrand:"Pirelli",       prominence:"MODERATE",  rawStartTc:"00:01:30", cleanStart:90,  cleanDur:18,  cleanVal:9000,   asset_id:"fake_5",  source:"iconik", timestamp:"5/8/2026, 3:44:55 PM"  },
+      { clip_name:"NFL Thanksgiving Halftime",             brand:"Gatorade Cooler",              coreBrand:"Gatorade",      prominence:"MODERATE",  rawStartTc:"00:04:10", cleanStart:250, cleanDur:12,  cleanVal:6000,   asset_id:"fake_6",  source:"iconik", timestamp:"5/9/2026, 7:02:11 PM"  },
+      { clip_name:"NFL Thanksgiving Halftime",             brand:"Verizon Sideline Net",         coreBrand:"Verizon",       prominence:"PROMINENT", rawStartTc:"00:04:15", cleanStart:255, cleanDur:20,  cleanVal:20000,  asset_id:"fake_6",  source:"iconik", timestamp:"5/9/2026, 7:02:11 PM"  },
+      { clip_name:"NFL Thanksgiving Halftime",             brand:"Nike Uniform Swoosh",          coreBrand:"Nike",          prominence:"SUBTLE",    rawStartTc:"00:02:00", cleanStart:120, cleanDur:60,  cleanVal:12000,  asset_id:"fake_6",  source:"iconik", timestamp:"5/9/2026, 7:02:11 PM"  },
+      { clip_name:"UFC 300 Main Event",                    brand:"Monster Energy Octagon Center", coreBrand:"Monster Energy",prominence:"DOMINANT",  rawStartTc:"00:00:05", cleanStart:5,   cleanDur:300, cleanVal:300000, asset_id:"fake_7",  source:"mimir",  timestamp:"5/10/2026, 9:55:33 PM" },
+      { clip_name:"UFC 300 Main Event",                    brand:"Venum Fight Shorts",           coreBrand:"Venum",         prominence:"MODERATE",  rawStartTc:"00:00:20", cleanStart:20,  cleanDur:250, cleanVal:125000, asset_id:"fake_7",  source:"mimir",  timestamp:"5/10/2026, 9:55:33 PM" },
+      { clip_name:"UFC 300 Main Event",                    brand:"Modelo Octagon Banner",        coreBrand:"Modelo",        prominence:"PROMINENT", rawStartTc:"00:05:00", cleanStart:300, cleanDur:80,  cleanVal:80000,  asset_id:"fake_7",  source:"mimir",  timestamp:"5/10/2026, 9:55:33 PM" },
+      { clip_name:"Champions League Group Stage",          brand:"Heineken LED Board",           coreBrand:"Heineken",      prominence:"DOMINANT",  rawStartTc:"00:10:00", cleanStart:600, cleanDur:45,  cleanVal:45000,  asset_id:"fake_8",  source:"mimir",  timestamp:"5/11/2026, 1:30:47 PM" },
+      { clip_name:"Champions League Group Stage",          brand:"Mastercard Tunnel Banner",     coreBrand:"Mastercard",    prominence:"PROMINENT", rawStartTc:"00:00:05", cleanStart:5,   cleanDur:15,  cleanVal:15000,  asset_id:"fake_8",  source:"mimir",  timestamp:"5/11/2026, 1:30:47 PM" },
+      { clip_name:"PGA Masters Final Round",               brand:"Titleist Golf Bag",            coreBrand:"Titleist",      prominence:"MODERATE",  rawStartTc:"00:12:30", cleanStart:750, cleanDur:25,  cleanVal:12500,  asset_id:"fake_9",  source:"iconik", timestamp:"5/12/2026, 8:10:22 AM" },
+      { clip_name:"PGA Masters Final Round",               brand:"Rolex Leaderboard",            coreBrand:"Rolex",         prominence:"PROMINENT", rawStartTc:"00:15:00", cleanStart:900, cleanDur:10,  cleanVal:10000,  asset_id:"fake_9",  source:"iconik", timestamp:"5/12/2026, 8:10:22 AM" },
     ];
 
     /* ════ STATE ════ */
     let rawData=[...SEED.map(r=>({...r}))];
     let excludedUids=new Set(), deletedUids=new Set(), rowEdits={};
     let eventViewers={};
-    let selBrand=null, ddBrand=null, grouping='event', expandedBrands=new Set();
+    let selBrand=null, ddBrand=null, grouping='event', expandedBrands=new Set(), groupSort='date-desc';
     let sortCol='value', sortDesc=true;
     let autoOn=false, autoTimer=null, simCount=0;
     let tempOvList=[];
@@ -509,7 +578,7 @@
     function srcLink(r){
       const s=detectSource(r);
       if(s==='mimir'){
-        const url=`https://mimir.mjoll.no/item-details/${r.asset_id}`;
+        const url=`https://mimir.mjoll.no/item-details/${r.asset_id}?time=${Math.round((r.cleanStart||0)*1000)}`;
         return `<a href="${url}" target="_blank" class="link-btn link-mimir"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Mimir ↗</a>`;
       }
       const url=`https://app.iconik.io/asset/${r.asset_id}/?time=${r.cleanStart||0}`;
@@ -648,6 +717,7 @@
       evCh=new Chart(document.getElementById('evChart').getContext('2d'),{type:'bar',data:{labels:data.map(d=>tr(d.n,28)),datasets:[{data:data.map(d=>d.v),backgroundColor:'rgba(187,154,247,.65)',borderRadius:4}]},options:{...cO,indexAxis:'y',plugins:{datalabels:{anchor:'end',align:'right',color:C.grn,font:{weight:'bold',size:11},formatter:v=>$M(v)},legend:{display:false},tooltip:{callbacks:{title:i=>data[i[0].dataIndex].n}}},layout:{padding:{right:80,left:6}},scales:{x:{display:false},y:{grid:{display:false},border:{display:false},ticks:{color:C.brt,font:{weight:'bold',size:11}},afterFit(ax){ax.width=Math.max(120,Math.min(240,ax.width));}}}}});
     }
     function drawBarChart(data,allRows){
+      document.getElementById('barWrap').style.minHeight=Math.max(240,data.length*46)+'px';
       if(barCh)barCh.destroy();
       barCh=new Chart(document.getElementById('barChart').getContext('2d'),{type:'bar',data:{labels:data.map(d=>d.n),datasets:[{data:data.map(d=>d.v),backgroundColor:data.map(d=>(selBrand&&d.n!==selBrand)?C.brd:C.acc),borderRadius:4}]},options:{...cO,indexAxis:'y',plugins:{datalabels:{anchor:'end',align:'right',color:C.grn,font:{weight:'bold',size:11},formatter:v=>$M(v)},legend:{display:false},tooltip:{callbacks:{afterLabel(ctx){const b=data[ctx.dataIndex].n;const e=[...new Set(allRows.filter(r=>r.coreBrand===b).map(r=>r.clip_name))];return e.length>1?e.length+' events — click to expand':'Click to expand';}}}},layout:{padding:{right:80}},scales:{x:{display:false},y:{grid:{display:false},border:{display:false},ticks:{color:C.brt,font:{weight:'bold',size:11}}}},onClick(e,els){if(!els.length)return;const name=data[els[0].index].n;if(selBrand===name){clearBF();}else{selBrand=name;ddBrand=name;document.getElementById('btnCF').style.display='block';document.getElementById('ddCard').classList.add('open');renderDashboard();}}}});
     }
@@ -704,7 +774,7 @@
       const c=document.getElementById('jCont');
       if(!rows.length){c.innerHTML=`<div style="text-align:center;padding:40px;color:var(--mut);">No data found.</div>`;return;}
       const groups={};
-      rows.forEach(r=>{const k=grouping==='event'?r.clip_name:r.coreBrand;if(!groups[k])groups[k]={rows:[],total:0};groups[k].rows.push(r);if(r.isIncluded)groups[k].total+=r.cleanVal;});
+      rows.forEach(r=>{const k=grouping==='event'?r.clip_name:r.coreBrand;if(!groups[k])groups[k]={rows:[],total:0,ts:0};groups[k].rows.push(r);if(r.isIncluded)groups[k].total+=r.cleanVal;const t=r.timestamp?new Date(r.timestamp).getTime():0;if(t>groups[k].ts)groups[k].ts=t;});
       const arr=col=>sortCol===col?(sortDesc?'↓':'↑'):'↕';
       const W={DOMINANT:4,PROMINENT:3,MODERATE:2,SUBTLE:1};
       let html='';
@@ -738,7 +808,13 @@
         </tr>`;
       };
 
-      for(const[gName,g] of Object.entries(groups).sort((a,b)=>b[1].total-a[1].total)){
+      const sortedGroups=Object.entries(groups).sort((a,b)=>{
+        if(groupSort==='date-desc') return b[1].ts-a[1].ts;
+        if(groupSort==='date-asc')  return a[1].ts-b[1].ts;
+        if(groupSort==='val-asc')   return a[1].total-b[1].total;
+        return b[1].total-a[1].total;
+      });
+      for(const[gName,g] of sortedGroups){
         const isEv=grouping==='event';
         const icon=isEv?'🎬':'🏷️';
         const gLogo=!isEv?logoEl(gName):'';
@@ -789,6 +865,7 @@
       c.innerHTML=html;
     }
 
+    window.setGroupSort=s=>{groupSort=s;document.getElementById('grpSort').value=s;renderDashboard();};
     window.toggleRow=id=>{excludedUids.has(id)?excludedUids.delete(id):excludedUids.add(id);renderDashboard();};
     window.setSort=col=>{sortCol===col?sortDesc=!sortDesc:(sortCol=col,sortDesc=true);renderDashboard();};
     window.setGroup=type=>{grouping=type;document.getElementById('togEv').className=`tog${type==='event'?' on':''}`;document.getElementById('togBr').className=`tog${type==='brand'?' on':''}`;renderDashboard();};
